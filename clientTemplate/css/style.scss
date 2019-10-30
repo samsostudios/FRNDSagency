@@ -1,0 +1,45 @@
+// Variables
+
+// Colors
+$pink: #FCB2AE;
+$blue: #A3DAFF;
+$black: #282828;
+$offWhite: #f4f4f4;
+$white: #ffffff;
+
+// Fonts
+$raleway: "raleway", sans-serif;
+$oswald: "oswald", sans-serif;
+$stratos: "stratos", sans-serif;
+
+// Font Weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700; 
+
+// Devices
+$desktop: 840px;
+
+@mixin desktop{
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+
+    .headerArea{
+        width: 100vw;
+        height: 100vh;
+        background-color: $pink;
+    }
+}

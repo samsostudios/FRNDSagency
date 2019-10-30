@@ -1,0 +1,305 @@
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #282828;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+body {
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 100%;
+}
+
+body .hamburgerArea {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .hamburgerArea .menuIcon {
+  margin-right: 1.5em;
+  cursor: pointer;
+}
+
+body .hamburgerArea span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 4px;
+  position: relative;
+  background: #282828;
+  border-radius: 3px;
+}
+
+@media (min-width: 840px) {
+  body .hamburgerArea {
+    display: none;
+  }
+}
+
+body .offPageMenu {
+  width: 100vw;
+  height: 0vh;
+  opacity: 0.5;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: fixed;
+  z-index: 5;
+}
+
+body .offPageMenu .menu {
+  margin-left: 2em;
+  opacity: 1;
+}
+
+body .offPageMenu .menu li {
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
+  opacity: 0;
+  cursor: pointer;
+  color: #282828;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+body #landing {
+  width: 100vw;
+  height: 90vh;
+}
+
+body .menuArea {
+  display: none;
+}
+
+@media (min-width: 840px) {
+  body .menuArea {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .menuArea .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 3em;
+    margin-left: 3em;
+    opacity: 0;
+  }
+  body .menuArea h3 {
+    padding-left: 2em;
+    font-family: "raleway", sans-serif;
+    font-weight: 400;
+    color: #282828;
+    font-size: 1em;
+  }
+}
+
+body .circle {
+  width: 100vw;
+  height: 100%;
+  background-color: #f4f4f4;
+  z-index: 1;
+  position: absolute;
+  -webkit-clip-path: circle(0% at 50% 100%);
+          clip-path: circle(0% at 50% 100%);
+}
+
+@media (min-width: 840px) {
+  body .circle {
+    -webkit-clip-path: circle(0% at 0 100%);
+            clip-path: circle(0% at 0 100%);
+  }
+}
+
+body .contentArea {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 840px) {
+  body .contentArea {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+body .contentArea .imageArea {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media (min-width: 840px) {
+  body .contentArea .imageArea {
+    width: 50%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+}
+
+body .contentArea .imageArea img {
+  height: 75%;
+  opacity: 0;
+}
+
+@media (min-width: 840px) {
+  body .contentArea .imageArea img {
+    max-height: 100%;
+  }
+}
+
+body .contentArea .textArea {
+  width: 100%;
+  height: 40%;
+  padding-left: 2em;
+  padding-right: 2em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+  body .contentArea .textArea {
+    width: 50%;
+    height: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+body .contentArea .textArea h1 {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  color: #282828;
+  font-size: 2em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  opacity: 0;
+}
+
+@media (min-width: 840px) {
+  body .contentArea .textArea h1 {
+    font-size: 2.5em;
+  }
+}
+
+body .downArea {
+  width: 100%;
+  height: 10vh;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+}
+
+body .downArea i {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+body .demoWrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background-image: url(../assets/test.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+body .clientsWrapper {
+  width: 100vw;
+  height: 100vh;
+}
+/*# sourceMappingURL=style.css.map */
