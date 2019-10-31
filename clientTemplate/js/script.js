@@ -1,5 +1,7 @@
 $(document).ready(function(){
     console.log("test");
+    var $waveTop = $('#waveTop');
+    // TweenMax.to("#bhShape1", 5, {bezier:[{left:100, top:250}, {left:300, top:0}, {left:500, top:400}], ease:Power1.easeInOut});
 });
 
 // Mobile Menu Functionality
