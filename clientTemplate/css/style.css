@@ -3,14 +3,305 @@ html, body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #282828;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #282828;
+}
+
+h2 {
+  font-family: "raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #282828;
+}
+
+h3 {
+  font-family: "raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  color: #282828;
+}
+
 body {
   width: 100%;
   height: 100%;
 }
 
+body .hamburgerArea {
+  width: 100vw;
+  height: 10vh;
+  position: fixed;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .hamburgerArea .menuLogo {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .hamburgerArea .menuLogo img {
+  height: 80%;
+  margin-left: 1.5em;
+}
+
+body .hamburgerArea .menuIcon {
+  margin-right: 1.5em;
+  cursor: pointer;
+}
+
+body .hamburgerArea span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin-bottom: 4px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+}
+
+body .offPageMenu {
+  width: 100vw;
+  height: 0vh;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: fixed;
+  z-index: 5;
+}
+
+body .offPageMenu .menu {
+  margin-left: 2em;
+  opacity: 1;
+}
+
+body .offPageMenu .menu li {
+  -webkit-transform: translate(-50px);
+          transform: translate(-50px);
+  opacity: 0;
+  cursor: pointer;
+  color: #282828;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 body .headerArea {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+body .headerArea .heroContainer {
+  width: 100%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../../assets/heroImages/elementHero.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  position: fixed;
+}
+
+body .headerArea .heroContainer img {
+  width: 80%;
+}
+
+body .headerArea .overviewContainer {
+  width: 100vw;
+  height: 50vh;
+  border-top-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+  top: 50%;
+  position: relative;
+}
+
+body .headerArea .overviewContainer .scrollIndicatorRow {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .headerArea .overviewContainer .scrollIndicatorRow .indicator {
+  width: 20%;
+  height: 15%;
+  background-color: #f4f4f4;
+  border-radius: 1000px;
+}
+
+body .headerArea .overviewContainer .overviewRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .headerArea .overviewContainer .overviewRow .oRowLeft {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .headerArea .overviewContainer .overviewRow .oRowRight {
+  width: 50%;
+}
+
+body .headerArea .overviewContainer .overviewRow .oRowRight ul {
+  margin: 0;
+}
+
+body .headerArea .overviewContainer .overviewRow .oRowRight li {
+  font-weight: 400;
+  font-size: 1em;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+body .headerArea .overviewContainer .client {
+  width: 100%;
+  height: 20%;
+}
+
+body .headerArea .overviewContainer .industry {
+  width: 100%;
+  height: 20%;
+}
+
+body .headerArea .overviewContainer .ourRole {
+  width: 100%;
+  height: 60%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 1em;
+}
+
+body .headerArea .overviewContainer .ourRole h3 {
+  margin: 0;
+}
+
+body .headerArea .overviewContainer .ourRole .oRowLeft {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .headerArea .overviewContainer .overviewSeperator {
+  width: 1%;
+  height: 75%;
   background-color: #FCB2AE;
+  border-radius: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+  left: 50%;
+}
+
+body .workArea1 {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 /*# sourceMappingURL=style.css.map */
