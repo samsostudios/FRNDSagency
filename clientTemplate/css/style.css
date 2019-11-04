@@ -385,7 +385,7 @@ body .workArea1 .wContent .wTextArea {
   height: 15%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 0em 1em;
+  padding: 0em 1.5em;
 }
 
 body .workArea1 .wContent .wTextArea h3 {
@@ -404,8 +404,10 @@ body .workArea1 .wContent .wWorkArea {
   overflow: hidden;
 }
 
-body .workArea1 .wContent .wWorkArea img {
-  width: 110%;
+body .workArea1 .wContent .wWorkArea .brandingImage {
+  max-width: 100%;
   position: absolute;
+  height: auto;
+  width: auto;
 }
 /*# sourceMappingURL=style.css.map */

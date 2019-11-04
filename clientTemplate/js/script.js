@@ -28,6 +28,8 @@ var toStart = function(){
 $(document).ready(function(){
     
     toEnd();
+
+    TweenMax.from("#brandingPaper", 3,  {opacity: 0, y: 200});
 });
 
 // Mobile Menu Functionality

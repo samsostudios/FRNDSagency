@@ -109,14 +109,6 @@ body{
             background: $white;
             border-radius: 3px;
         }
-
-        // span:nth-child(1){
-        //     background: $pink;
-        // }
-        // span:nth-child(2){
-        //     background: $blue;
-        // }
-        
     }
 
     .offPageMenu{
@@ -345,7 +337,7 @@ body{
                 width: 100%;
                 height: 15%;
                 box-sizing: border-box;
-                padding: 0em 1em;
+                padding: 0em 1.5em;
 
                 h3{
                     font-weight: $regular;
@@ -359,9 +351,11 @@ body{
                 justify-content: center;
                 overflow: hidden;
 
-                img{
-                    width: 110%;
+                .brandingImage{
+                    max-width: 100%;
                     position: absolute;
+                    height: auto;
+                    width: auto
                 }
             }
         }
