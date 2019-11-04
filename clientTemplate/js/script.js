@@ -1,7 +1,33 @@
+var waveBackSVG = document.getElementById("waveBack");
+var snap = Snap(waveBackSVG);
+var waveBackStart = Snap.select("#waveBackStart");
+var waveBackEnd = Snap.select("#waveBackEnd");
+var wbStartPoints = waveBackStart.node.getAttribute("d");
+var wbEndPoints = waveBackEnd.node.getAttribute("d");
+
+var waveFrontSVG = document.getElementById('waveFront');
+var waveFrontStart = Snap.select("#waveFrontStart");
+var waveFrontEnd = Snap.select("#waveFrontEnd");
+var wfStartPoints = waveFrontStart.node.getAttribute("d");
+var wfEndPoints = waveFrontEnd.node.getAttribute("d");
+
+console.log("start points", waveFrontStart);
+
+
+
+var toEnd = function(){
+    waveBackStart.animate({d: wbEndPoints}, 6000, mina.easeinout, toStart);
+    waveFrontStart.animate({d: wfEndPoints}, 6000, mina.easeinout, toStart);
+}
+
+var toStart = function(){
+    waveBackStart.animate({d: wbStartPoints}, 6000, mina.easeinout, toEnd);
+    waveFrontStart.animate({d: wfStartPoints}, 6000, mina.easeinout, toEnd);
+}
+
 $(document).ready(function(){
-    console.log("test");
-    var $waveTop = $('#waveTop');
-    // TweenMax.to("#bhShape1", 5, {bezier:[{left:100, top:250}, {left:300, top:0}, {left:500, top:400}], ease:Power1.easeInOut});
+    
+    toEnd();
 });
 
 // Mobile Menu Functionality

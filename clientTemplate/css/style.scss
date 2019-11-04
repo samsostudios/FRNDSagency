@@ -273,24 +273,97 @@ body{
 
     .workArea1{
         width: 100vw;
-        height: 100vh;
+        height: 200vh;
         background-color: white; 
         position: relative;
         z-index: 2;
         
         #waveTop{
             width: 100%;
-            height: 15%;
-            background-image: url('../../assets/uiElements/shapeSmall.svg');
-            // background-size: 100px;
-            // background-repeat: repeat-x;
+            height: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
 
+            #waveFront{
+                position: absolute;
+                z-index: 2;
+            }
+            #waveBack{
+                position: absolute;
+                z-index: 0;
+                // opacity: 0.6;
+            }
+            #waveBackEnd{
+                opacity: 0;
+                background-color: $offWhite;
+            }
+            #waveFrontEnd{
+                opacity: 0;
+            }
         }
 
-        .w1Content{
+        .wContent{
             width: 100%;
-            height: 85%;
+            height: 90%;
             background-color: $offWhite;
+            overflow: hidden;
+
+            .wHeaderArea{
+                width: 100%;
+                height: 15%;
+                position: relative;
+
+                h1{
+                    position: absolute;
+                    font-size: 7em;
+                    font-weight: $bold;
+                    color: white;
+                    margin: 0;
+                    margin-left: -0.2em;
+                    z-index: 1;
+                }
+                h2{
+                    position: absolute;
+                    font-size: 3em;
+                    font-weight: $bold;
+                    color: $black;
+                    margin: 0;
+                    margin-left: 0.3em;
+                    margin-top: 2.5em;
+                    z-index: 1;
+                }
+                img{
+                    position: absolute;
+                    z-index: 0;
+                    margin-top: 5em;
+                    margin-left: -3em;
+                }
+            }
+
+            .wTextArea{
+                width: 100%;
+                height: 15%;
+                box-sizing: border-box;
+                padding: 0em 1em;
+
+                h3{
+                    font-weight: $regular;
+                }
+            }
+
+            .wWorkArea{
+                width: 100%;
+                height: 70%;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;
+
+                img{
+                    width: 110%;
+                    position: absolute;
+                }
+            }
         }
     }
 }
