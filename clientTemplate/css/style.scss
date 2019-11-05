@@ -83,6 +83,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: rgba(255, 255, 255, 0);
 
         .menuLogo{
             height: 100%;
@@ -157,6 +158,7 @@ body{
             background-position: center;
             z-index: 0;
             position: fixed;
+            filter: blur(0px);
 
             img{
                 width: 80%;

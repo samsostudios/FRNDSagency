@@ -1,3 +1,4 @@
+// Wave Animations
 var waveBackSVG = document.getElementById("waveBack");
 var snap = Snap(waveBackSVG);
 var waveBackStart = Snap.select("#waveBackStart");
@@ -69,3 +70,65 @@ $(".menuIcon").click(function(){
         TweenMax.to(".offPageMenu", 1, {height: "0vh", delay: 0});
     }
 });
+
+// Scroll Magic
+const scrollController = new ScrollMagic.Controller();
+
+// Header fade on scroll
+var headerAnimationTimeline = new TimelineMax();
+headerAnimationTimeline.to(".clientLogo", 2, {y: -200, width: "40%", opacity: 0});
+// headerAnimationTimeline.to(".heroContainer", 2, {opacity: 0});
+// headerAnimationTimeline.to(".hamburgerArea", 2, {backgroundColor: "rgba(255, 255, 255, 0.1"}, "-=2");
+
+const headerScene = new ScrollMagic.Scene({
+    duration: 500,
+    triggerElement: ".overviewContainer",
+    triggerHook: 0.5
+})
+    // .addIndicators()
+    .setTween(headerAnimationTimeline)
+    .addTo(scrollController);
+
+// Menu bar color change1
+const menuFadeBlack = new TimelineMax();
+menuFadeBlack.to("#bottomHam", 0.5, {background: "#282828"});
+menuFadeBlack.to("#midHam", 0.5, {background: "#282828"});
+menuFadeBlack.to("#topHam", 0.5, {background: "#282828"});
+
+const menuBarColorScene = new ScrollMagic.Scene({
+    duration: 100,
+    triggerElement: ".overviewContainer",
+    triggerHook: 0
+})
+// .addIndicators()
+.setTween(menuFadeBlack)
+.addTo(scrollController);
+
+// Work Area 1 Animation
+const workArea1Animation = new TimelineMax();
+workArea1Animation.from("#sectionNumber1", 10, {x: -100, opacity: 0}, "-=5");
+workArea1Animation.from("#sectionNumber1Lines", 10, {x: 100, opacity: 0}, "-=2");
+workArea1Animation.from("#sectionNumber1Title", 10, {x: 100, opacity: 0}, "-=1");
+workArea1Animation.from(".wTextArea", 5, {opacity: 0, y: 200});
+
+
+const wArea1HeaderScene = new ScrollMagic.Scene({
+    duration: 400,
+    triggerElement: ".workArea1",
+    triggerHook: 0.5
+})
+    // .addIndicators()
+    .setTween(workArea1Animation)
+    .addTo(scrollController);
+
+const workArea1ImageAnimation = new TimelineMax();
+
+
+const wArea1ImageScene = new ScrollMagic.Scene({
+    duration: 1000,
+    triggerElement: "#brandingWorkArea",
+    triggerHook: 1
+})
+    .addIndicators()
+    .setPin("workArea1")
+    .addTo(scrollController)
