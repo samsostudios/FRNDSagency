@@ -74,7 +74,7 @@ body{
     width: 100%;
     height: 100%;
 
-    // Mobile Menu
+    // ** MENU AREA STYLES **
     .hamburgerArea{
         width: 100vw;
         height: 10vh;
@@ -138,7 +138,11 @@ body{
             }
         }
     }
+    // ** END MENU AREA STYLES **
 
+    // --------------------------
+
+    // ** HEADER AREA STYLES **
     .headerArea{
         width: 100vw;
         height: 100vh;
@@ -168,8 +172,8 @@ body{
         .overviewContainer{
             width: 100vw;
             height: 50vh;
-            border-top-left-radius: 1.5em;
-            border-top-right-radius: 1.5em;
+            border-top-left-radius: 0.5em;
+            border-top-right-radius: 0.5em;
             background-color: $white;
             display: flex;
             flex-direction: column;
@@ -264,48 +268,68 @@ body{
             }
         }
     }
+    // ** END HEADER AREA STYLES **
 
-    .workArea1{
+    // ----------------------------
+
+    // ** Wave Break Styles **
+    .waveBreak{
+        width: 100%;
+        height: 14vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: white;
+
+        .waveFront{
+            position: absolute;
+            z-index: 2;
+        }
+        .waveBack{
+            position: absolute;
+            z-index: 0;
+        }
+        .hideEndWave{
+            opacity: 0;
+        }
+    }
+
+    .waveFlipped{
+        transform: rotate(180deg);
+    }
+    // ** END WAVE BREAK **
+
+    // ---------------------------
+
+    // ** WORK AREA STYLES **
+    #workArea1{
+        background-color: $offWhite;
+    }
+    #workArea2{
+        background-color: olive;
+    }
+    #workArea3{
+        background-color: orange;
+    }
+
+    .workArea{
         width: 100vw;
-        height: 200vh;
-        background-color: white; 
+        height: 100vh; 
         position: relative;
         z-index: 2;
-        
-        #waveTop{
-            width: 100%;
-            height: 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-
-            #waveFront{
-                position: absolute;
-                z-index: 2;
-            }
-            #waveBack{
-                position: absolute;
-                z-index: 0;
-                // opacity: 0.6;
-            }
-            #waveBackEnd{
-                opacity: 0;
-                background-color: $offWhite;
-            }
-            #waveFrontEnd{
-                opacity: 0;
-            }
-        }
 
         .wContent{
             width: 100%;
-            height: 90%;
-            background-color: $offWhite;
+            height: 100%;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-top: 10vh;
 
             .wHeaderArea{
                 width: 100%;
-                height: 15%;
+                height: 25vh;
                 position: relative;
 
                 h1{
@@ -337,7 +361,7 @@ body{
 
             .wTextArea{
                 width: 100%;
-                height: 15%;
+                height: 25vh;
                 box-sizing: border-box;
                 padding: 0em 1.5em;
 
@@ -348,18 +372,27 @@ body{
 
             .wWorkArea{
                 width: 100%;
-                height: 70%;
+                height: 60vh;
                 display: flex;
                 justify-content: center;
                 overflow: hidden;
 
                 .brandingImage{
-                    max-width: 100%;
                     position: absolute;
-                    height: auto;
-                    width: auto
+                    width: 85%;
+                    // height: auto;
                 }
             }
         }
+    }
+    // ** END WORK AREA **
+
+    // ----------------------
+
+    // ** Footer Styles **
+    .footer{
+        width: 100%;
+        height: 50vh;
+        background-color:$black;
     }
 }

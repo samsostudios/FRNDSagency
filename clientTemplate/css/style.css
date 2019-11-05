@@ -169,8 +169,8 @@ body .headerArea .heroContainer img {
 body .headerArea .overviewContainer {
   width: 100vw;
   height: 50vh;
-  border-top-left-radius: 1.5em;
-  border-top-right-radius: 1.5em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,17 +300,9 @@ body .headerArea .overviewContainer .overviewSeperator {
   left: 50%;
 }
 
-body .workArea1 {
-  width: 100vw;
-  height: 200vh;
-  background-color: white;
-  position: relative;
-  z-index: 2;
-}
-
-body .workArea1 #waveTop {
+body .waveBreak {
   width: 100%;
-  height: 10%;
+  height: 14vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -321,41 +313,70 @@ body .workArea1 #waveTop {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  background-color: white;
 }
 
-body .workArea1 #waveTop #waveFront {
+body .waveBreak .waveFront {
   position: absolute;
   z-index: 2;
 }
 
-body .workArea1 #waveTop #waveBack {
+body .waveBreak .waveBack {
   position: absolute;
   z-index: 0;
 }
 
-body .workArea1 #waveTop #waveBackEnd {
+body .waveBreak .hideEndWave {
   opacity: 0;
+}
+
+body .waveFlipped {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+body #workArea1 {
   background-color: #f4f4f4;
 }
 
-body .workArea1 #waveTop #waveFrontEnd {
-  opacity: 0;
+body #workArea2 {
+  background-color: olive;
 }
 
-body .workArea1 .wContent {
+body #workArea3 {
+  background-color: orange;
+}
+
+body .workArea {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+
+body .workArea .wContent {
   width: 100%;
-  height: 90%;
-  background-color: #f4f4f4;
+  height: 100%;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 10vh;
 }
 
-body .workArea1 .wContent .wHeaderArea {
+body .workArea .wContent .wHeaderArea {
   width: 100%;
-  height: 15%;
+  height: 25vh;
   position: relative;
 }
 
-body .workArea1 .wContent .wHeaderArea h1 {
+body .workArea .wContent .wHeaderArea h1 {
   position: absolute;
   font-size: 7em;
   font-weight: 700;
@@ -365,7 +386,7 @@ body .workArea1 .wContent .wHeaderArea h1 {
   z-index: 1;
 }
 
-body .workArea1 .wContent .wHeaderArea h2 {
+body .workArea .wContent .wHeaderArea h2 {
   position: absolute;
   font-size: 3em;
   font-weight: 700;
@@ -376,28 +397,28 @@ body .workArea1 .wContent .wHeaderArea h2 {
   z-index: 1;
 }
 
-body .workArea1 .wContent .wHeaderArea img {
+body .workArea .wContent .wHeaderArea img {
   position: absolute;
   z-index: 0;
   margin-top: 5em;
   margin-left: -3em;
 }
 
-body .workArea1 .wContent .wTextArea {
+body .workArea .wContent .wTextArea {
   width: 100%;
-  height: 15%;
+  height: 25vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0em 1.5em;
 }
 
-body .workArea1 .wContent .wTextArea h3 {
+body .workArea .wContent .wTextArea h3 {
   font-weight: 400;
 }
 
-body .workArea1 .wContent .wWorkArea {
+body .workArea .wContent .wWorkArea {
   width: 100%;
-  height: 70%;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,10 +428,14 @@ body .workArea1 .wContent .wWorkArea {
   overflow: hidden;
 }
 
-body .workArea1 .wContent .wWorkArea .brandingImage {
-  max-width: 100%;
+body .workArea .wContent .wWorkArea .brandingImage {
   position: absolute;
-  height: auto;
-  width: auto;
+  width: 85%;
+}
+
+body .footer {
+  width: 100%;
+  height: 50vh;
+  background-color: #282828;
 }
 /*# sourceMappingURL=style.css.map */

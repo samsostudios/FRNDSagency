@@ -1,8 +1,8 @@
 // Variables
 
 // Colors
-$pink: #FCB2AE;
-$blue: #A3DAFF;
+$pink: #fcb2ae;
+$blue: #a3daff;
 $black: #282828;
 $offWhite: #f4f4f4;
 $white: #ffffff;
@@ -17,253 +17,251 @@ $light: 300;
 $regular: 400;
 $medium: 500;
 $semiBold: 600;
-$bold: 700; 
+$bold: 700;
 
 // Devices
 $desktop: 840px;
 
-@mixin desktop{
-    @media (min-width: #{$desktop}){
-        @content;
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    font-family: $raleway;
+    font-weight: $regular;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+body {
+  background-color: $offWhite;
+  width: 100%;
+  height: 100%;
+
+  // Mobile Menu
+  .hamburgerArea {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .menuIcon {
+      margin-right: 1.5em;
+      cursor: pointer;
     }
-}
+    span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin-bottom: 4px;
+      position: relative;
+      background: #282828;
+      border-radius: 3px;
+    }
 
-html, body{
-    padding: 0;
-    margin: 0;
-}
+    @include desktop {
+      display: none;
+    }
+  }
 
-a{
-    text-decoration: none;
-    color: $black;
-}
+  .offPageMenu {
+    width: 100vw;
+    height: 0vh;
+    opacity: 0.5;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 5;
 
-ul{
-    list-style-type: none;
-    padding-left: 0;
+    .menu {
+      margin-left: 2em;
+      opacity: 1;
 
-    li{
+      li {
+        transform: translate(-50px);
+        opacity: 0;
+        cursor: pointer;
+        color: $black;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  // Landing Area
+  #landing {
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .menuArea {
+    display: none;
+
+    @include desktop {
+      width: 100%;
+      height: 10vh;
+      position: fixed;
+      z-index: 5;
+      display: flex;
+
+      .menu {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 3em;
+        margin-left: 3em;
+        opacity: 0;
+      }
+
+      h3 {
+        padding-left: 2em;
         font-family: $raleway;
         font-weight: $regular;
-        font-size: 1.5em;
-        margin-top:0.5em;
-        margin-bottom: 0.5em;
+        color: $black;
+        font-size: 1em;
+      }
     }
-}
+  }
 
-body{
+  .circle {
+    width: 100vw;
+    height: 100%;
     background-color: $offWhite;
+    z-index: 1;
+    position: absolute;
+    clip-path: circle(0% at 50% 100%);
+
+    @include desktop {
+      clip-path: circle(0% at 0 100%);
+    }
+  }
+
+  .contentArea {
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
 
-    // Mobile Menu
-    .hamburgerArea{
-        width: 100vw;
-        height: 10vh;
-        position: fixed;
-        z-index: 10;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        .menuIcon{
-            margin-right: 1.5em;
-            cursor: pointer;
-        }
-        span{
-            display: block;
-            width: 30px;
-            height: 3px;
-            margin-bottom: 4px;
-            position: relative;
-            background: #282828;
-            border-radius: 3px;
-        }
-
-        @include desktop{
-            display: none;
-        }
+    @include desktop {
+      flex-direction: row-reverse;
     }
 
-    .offPageMenu{
-        width: 100vw;
-        height: 0vh;
-        opacity: 0.5;
-        background-color: $white;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        position: fixed;
-        z-index: 5;
-         
+    .imageArea {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
 
-        .menu{
-            margin-left: 2em;
-            opacity: 1;
-            
-            li{
-                transform: translate(-50px);
-                opacity: 0;
-                cursor: pointer;
-                color: $black;
-                margin-top: 1em;
-                margin-bottom: 1em;
-            }
-        }
-    }
-    
-    // Landing Area
-    #landing{
-        width: 100vw;
-        height: 90vh;
-    }
-
-    .menuArea{
-        display: none;
-
-        @include desktop{
-            width: 100%;
-            height: 10vh;
-            position: fixed;
-            z-index: 5;
-            display: flex;
-            
-            .menu{
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-                margin-top: 3em;
-                margin-left: 3em;
-                opacity: 0;
-            }
-            
-            h3{
-                padding-left: 2em;
-                font-family: $raleway;
-                font-weight: $regular;
-                color: $black;
-                font-size: 1em;
-                        }
-
-        }
-    }
-
-    .circle{
-        width: 100vw;
+      @include desktop {
+        width: 50%;
         height: 100%;
-        background-color: $offWhite;
-        z-index: 1;
-        position: absolute;
-        clip-path: circle(0% at 50% 100%);
-        
-        @include desktop{
-            clip-path: circle(0% at 0 100%);
-        }
-    }
-
-    .contentArea{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-
-        @include desktop{
-            flex-direction: row-reverse;
-        }
-
-        .imageArea{
-            width: 100%;
-            height: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-
-            @include desktop{
-                width: 50%;
-                height: 100%;
-                align-items: center;
-                overflow: hidden;
-            }
-
-            img{
-                height: 75%;
-                opacity: 0;
-
-                @include desktop{
-                    max-height: 100%;
-                }
-            }
-        }
-
-        .textArea{
-            width: 100%;
-            height: 40%;
-            padding-left: 2em;
-            padding-right: 2em;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-
-            @include desktop{
-                width: 50%;
-                height: 100%;
-                align-items: flex-start;
-            }
-
-            h1{
-                font-family: $raleway;
-                font-weight: $bold;
-                color: $black;
-                font-size: 2em;
-                margin-top: 0.3em;
-                margin-bottom: 0.3em;
-                opacity: 0;
-
-                @include desktop{
-                    font-size: 2.5em;
-                }
-            }
-        }
-    }
-
-    .downArea{
-        width: 100%;
-        height: 10vh;
-        background-color: $white;
-        position: relative;
-        z-index: 2;
-        display: flex;
         align-items: center;
-        justify-content: center;
-        background-color: transparent;
-        
+        overflow: hidden;
+      }
 
-        i{
-            font-size: 2em;
-            color: $white;
-            // margin: 0;
+      img {
+        height: 75%;
+        opacity: 0;
+
+        @include desktop {
+          max-height: 100%;
         }
+      }
     }
 
-    // Demo Area
-    .demoWrapper{
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        z-index: 1;
-        background-image: url(../assets/test.jpeg);
-        background-position: center;
-        background-size: cover;
-    }
+    .textArea {
+      width: 100%;
+      height: 40%;
+      padding-left: 2em;
+      padding-right: 2em;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
 
-    .clientsWrapper{
-        width: 100vw;
-        height: 100vh;
-        // background-color: tan;
+      @include desktop {
+        width: 50%;
+        height: 100%;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-family: $raleway;
+        font-weight: $bold;
+        color: $black;
+        font-size: 2em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        opacity: 0;
+
+        @include desktop {
+          font-size: 2.5em;
+        }
+      }
     }
+  }
+
+  .downArea {
+    width: 100%;
+    height: 10vh;
+    background-color: $white;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+
+    i {
+      font-size: 2em;
+      color: $white;
+      // margin: 0;
+    }
+  }
+
+  // Demo Area
+  .demoWrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    background-image: url(../assets/test.jpeg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .clientsWrapper {
+    width: 100vw;
+    height: 100vh;
+    // background-color: tan;
+  }
 }
