@@ -167,17 +167,17 @@ const menuBarColorScene = new ScrollMagic.Scene({
 // --------------END---------------
 
 // Work Area 1 Animation
-const workTextAnimation = new TimelineMax();
-workTextAnimation.from("#sectionNumber1", 0.2, { x: -100, opacity: 0 });
-workTextAnimation.from("#sectionNumber1Title", 0.5, { x: 100, opacity: 0 }, "-=0.1");
-workTextAnimation.from("#sectionNumber1Lines", 0.5, { x: 100, opacity: 0 }, "-=0.2");
-workTextAnimation.from(".wTextArea", 0.3, { opacity: 0, y: 100 });
+const work1TextAnimation = new TimelineMax();
+work1TextAnimation.from("#sectionNumber1", 0.2, { x: -100, opacity: 0 });
+work1TextAnimation.from("#sectionNumber1Title", 0.5, { x: 100, opacity: 0 }, "-=0.1");
+work1TextAnimation.from("#sectionNumber1Lines", 0.5, { x: 50, opacity: 0 }, "-=0.6");
+work1TextAnimation.from("#workArea1Text", 0.3, { opacity: 0, y: 100 });
 
-const workAreaTextAnimation = new ScrollMagic.Scene({
+const work1AreaTextScene = new ScrollMagic.Scene({
   triggerElement: "#workArea1"
 })
   // .addIndicators()
-  .setTween(workTextAnimation)
+  .setTween(work1TextAnimation)
   .addTo(scrollController);
 
 const workAreaImageScrollAnimation = new TimelineMax();
@@ -186,7 +186,7 @@ workAreaImageScrollAnimation.from("#brandingPhone", 5, { opacity: 0, y: 200 });
 workAreaImageScrollAnimation.from("#businessCard2", 5, { opacity: 0, y: 200 });
 workAreaImageScrollAnimation.from("#businessCard1", 5, { opacity: 0, y: 200 });
 
-const workAreaTextScene = new ScrollMagic.Scene({
+const work1AreaScrollingScene = new ScrollMagic.Scene({
   duration: "100%",
   triggerElement: "#workArea1",
   triggerHook: "onLeave"
@@ -199,15 +199,31 @@ const workAreaTextScene = new ScrollMagic.Scene({
 // --------------END---------------
 
 // Work Area 2 Animation
-const workArea2Animation = new TimelineMax();
+const work2TextAnimation = new TimelineMax();
+work2TextAnimation.from("#sectionNumber2", 0.2, { x: 100, opacity: 0 });
+work2TextAnimation.from("#sectionNumber2Title", 0.5, { x: -100, opacity: 0 }, "-=0.1");
+work2TextAnimation.from("#sectionNumber2Lines", 0.5, { x: -50, opacity: 0 }, "-=0.6");
+work2TextAnimation.from("#workArea2Text", 0.3, { opacity: 0, y: 100 });
 
-const workArea2Scene = new ScrollMagic.Scene({
-    duration: "100%",
-    triggerElement: "#workArea2",
-    triggerHook: "onLeave"
+const work2AreaTextScene = new ScrollMagic.Scene({
+  triggerElement: "#workArea2"
 })
-  .addIndicators()
+  // .addIndicators()
+  .setTween(work2TextAnimation)
+  .addTo(scrollController);
+
+const work2AreaScrollAnimation = new TimelineMax();
+work2AreaScrollAnimation.from("#webDesignIMac", 2, {opacity: 0, y: 200});
+work2AreaScrollAnimation.from("#webDesignMacbook", 2, {opacity: 0, y: 200});
+
+const work2AreaScrollingScene = new ScrollMagic.Scene({
+  duration: "100%",
+  triggerElement: "#workArea2",
+  triggerHook: "onLeave"
+})
+  // .addIndicators()
   .setPin("#workArea2")
+  .setTween(work2AreaScrollAnimation)
   .addTo(scrollController);
 
 // --------------END---------------
