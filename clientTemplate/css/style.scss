@@ -310,6 +310,95 @@ body{
     }
     #workArea3{
         background-color: $white;
+        height: 100%;
+
+        #wContent3{
+            padding-top: 0vh;
+        }
+
+        #sectionNumber3{
+            color: $offWhite;
+            font-size: 6.5em;
+        }
+        #sectionNumber3Title{
+            font-size: 2.5em;
+            margin-top: 2.9em;
+        }
+
+        #wWorkArea3{
+            height: 250vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .wSection{
+                width: 100%;
+                height: 33%;
+                // margin-top: 2em;
+                position: relative;
+            }
+
+            #wSection1{
+                height: 10%;
+
+                iframe{
+                    display: block;       
+                    background: white;
+                    margin: 0;
+                    border: none;      
+                    height: 100%;       
+                    width: 100%;
+                    
+                }
+            }
+            #wSection2{
+                position: relative;
+                // background-color: yellow;
+                display: flex;
+            }
+
+            #alignRight{
+                align-items: flex-end;
+                margin-left: -1em;
+            }
+            .sectionTitle{
+                width: 100%;
+                height: 20%;
+                z-index: 3;
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-left: 1em;
+                margin-top: 3em;
+                
+                h1{
+                    font-family: $raleway;
+                    font-weight: $bold;
+                    font-size: 1.3em;
+                    color: $black;
+                    margin: 0;
+                }
+            }
+
+            .sectionContent{
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                position: absolute;
+                display: flex;
+                align-items: center;
+
+
+                img{
+                    width: 100%;
+                    position: absolute;
+                }
+
+            }
+        }
     }
 
     .workArea{
@@ -322,10 +411,6 @@ body{
             width: 100%;
             height: 100%;
             overflow: hidden;
-            // display: flex;
-            // flex-direction: row;
-            // // justify-content: space-around;
-            // // align-items: flex-end;
             padding-top: 10vh;
 
             .wHeaderRightAlign{
@@ -349,6 +434,8 @@ body{
                     margin: 0;
                     margin-left: -0.2em;
                     z-index: 1;
+
+                    
 
                     @include desktop{
                         font-size: 10em;
@@ -432,7 +519,77 @@ body{
     // ** Footer Styles **
     .footer{
         width: 100%;
-        height: 50vh;
+        height: 30vh;
         background-color:$black;
+        display: flex;
+        flex-direction: column;
+
+        .fContentArea{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: row;
+
+            .nextProjectTitleArea{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding-left: 1em;
+
+                h3{
+                    color: $pink;
+                    margin: 0;
+                    margin-bottom: 0.5em;
+                }
+                h1{
+                    color: $offWhite;
+                    margin: 0;
+                }
+            }
+
+            .nextProjectArrowArea{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding-right: 2em;
+
+                i{
+                    font-size: 2em;
+                    color: $offWhite;
+                }
+
+                i:hover{
+                    color: $pink;
+                }
+            }
+        }
+
+        .fCopyrightArea{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            i{
+                font-size: 0.75em;
+                color: $offWhite;
+                margin-right: 0.5em;
+                color: $pink;
+            }
+
+            h3{
+                font-weight: $regular;
+                font-size: 0.75em;
+                color: $offWhite;
+                margin: 0;
+            }
+        }
     }
 }

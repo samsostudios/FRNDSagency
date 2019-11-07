@@ -1,4 +1,10 @@
-// Wave Animations
+// Wave Top Animations
+var waveFrontSVG = document.getElementById("waveFront");
+var waveFrontStart = Snap.select("#waveFrontStart");
+var waveFrontEnd = Snap.select("#waveFrontEnd");
+var wfStartPoints = waveFrontStart.node.getAttribute("d");
+var wfEndPoints = waveFrontEnd.node.getAttribute("d");
+
 var waveBackSVG = document.getElementById("waveBack");
 var snap = Snap(waveBackSVG);
 var waveBackStart = Snap.select("#waveBackStart");
@@ -6,22 +12,36 @@ var waveBackEnd = Snap.select("#waveBackEnd");
 var wbStartPoints = waveBackStart.node.getAttribute("d");
 var wbEndPoints = waveBackEnd.node.getAttribute("d");
 
-var waveFrontSVG = document.getElementById("waveFront");
-var waveFrontStart = Snap.select("#waveFrontStart");
-var waveFrontEnd = Snap.select("#waveFrontEnd");
-var wfStartPoints = waveFrontStart.node.getAttribute("d");
-var wfEndPoints = waveFrontEnd.node.getAttribute("d");
+// Wave Footer Animation
+var footerWaveFrontSVG = document.getElementById("waveFrontFooter");
+var footerWaveFrontStart = Snap.select("#waveFrontStartFooter");
+var footerWaveFrontEnd = Snap.select("#waveFrontEndFooter");
+var wfFooterStartPoints = footerWaveFrontStart.node.getAttribute("d");
+var wfFooterEndPoint = footerWaveFrontEnd.node.getAttribute("d");
 
-console.log("start points", waveFrontStart);
+var footerWaveBackSVG = document.getElementById("waveBackFooter");
+var footerWaveBackStart = Snap.select("#waveBackStartFooter");
+var footerWaveFrontEnd = Snap.select("#waveBackEndFooter");
+var wbFooterStartPoints = footerWaveFrontStart.node.getAttribute("d");
+var wbFooterEndPoint = footerWaveFrontEnd.node.getAttribute("d");
 
 var toEnd = function() {
+  // Top Wave
   waveBackStart.animate({ d: wbEndPoints }, 6000, mina.easeinout, toStart);
   waveFrontStart.animate({ d: wfEndPoints }, 6000, mina.easeinout, toStart);
+  // Bottom Wave
+
+  footerWaveBackStart.animate({d: wbFooterEndPoint}, 6000, mina.easeinout, toStart);
+  footerWaveFrontStart.animate({d: wfFooterEndPoint}, 6000, mina.easeinout, toStart);
 };
 
 var toStart = function() {
+  // Top Wave
   waveBackStart.animate({ d: wbStartPoints }, 6000, mina.easeinout, toEnd);
   waveFrontStart.animate({ d: wfStartPoints }, 6000, mina.easeinout, toEnd);
+  // Bottom Wave
+  footerWaveBackStart.animate({d: wbFooterStartPoints}, 6000, mina.easeinout, toEnd);
+  footerWaveFrontStart.animate({d: wfFooterStartPoints}, 6000, mina.easeinout, toEnd);
 };
 
 $(document).ready(function() {
@@ -229,13 +249,59 @@ const work2AreaScrollingScene = new ScrollMagic.Scene({
 // --------------END---------------
 
 // Work Area 3 Animations
-const workArea3Animation = new TimelineMax();
 
-const workArea3Scene = new ScrollMagic.Scene({
-    duration: "200%",
-    triggerElement: "#workArea3",
-    triggerHook: "onLeave"
+// DraftKings
+const workArea3DKanimation = new TimelineMax();
+workArea3DKanimation.to("#dkMid", 5, {y: 50});
+workArea3DKanimation.to("#dkDashes", 5, {x: 100}, "-=5");
+workArea3DKanimation.to("#dkTop", 5, {y: -40}, "-=5");
+workArea3DKanimation.from("#dkBottom", 5, {y: 400}, "-=5");
+// workArea3DKanimation.to("#dkTitle h1", 5, {fontSize: "1.9em"}, "-=5");
+
+const workArea3DKscene = new ScrollMagic.Scene({
+    duration: "75%",
+    triggerElement: "#wSection2",
+    triggerHook: 0.5
 })
 // .addIndicators()
-.setPin("#workArea3")
+// .setPin("#workArea3")
+.setTween(workArea3DKanimation)
 .addTo(scrollController);
+
+// American Eagle
+const workArea3AEanimation = new TimelineMax();
+workArea3AEanimation.to("#aeMid", 5, {y: 50});
+workArea3AEanimation.to("#aeDashes", 5, {x: -100}, "-=5");
+workArea3AEanimation.to("#aeTop", 5, {y: -40}, "-=5");
+workArea3AEanimation.from("#aeBottom", 5, {y: 400}, "-=5");
+workArea3AEanimation.to("#aeTitle", 5, {height: "30%"}, "-=5");
+
+const workArea3AEscene = new ScrollMagic.Scene({
+  duration: "75%",
+  triggerElement: "#wSection3",
+  triggerHook: 0.5
+})
+// .addIndicators()
+// .setPin("#workArea3")
+.setTween(workArea3AEanimation)
+.addTo(scrollController);
+
+// Adidas X Parlay
+const workArea3AdidasAnimation = new TimelineMax();
+workArea3AdidasAnimation.to("#adidasMid", 5, {y: 50});
+workArea3AdidasAnimation.to("#adidasDashes", 5, {x: 100}, "-=5");
+workArea3AdidasAnimation.to("#adidasTop", 5, {y: -40}, "-=5");
+workArea3AdidasAnimation.from("#adidasBottom", 5, {y: 400}, "-=5");
+workArea3AdidasAnimation.to("#adidasTitle", 5, {height: "30%"}, "-=5");
+
+const workArea3AdidasScene = new ScrollMagic.Scene({
+  duration: "75%",
+  triggerElement: "#wSection4",
+  triggerHook: 0.5
+})
+// .addIndicators()
+// .setPin("#workArea3")
+.setTween(workArea3AdidasAnimation)
+.addTo(scrollController);
+
+// --------------END---------------
