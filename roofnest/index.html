@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, userscalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Roofnest || FRNDS Agency</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/mjt3ejp.css" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/favicon.png" />
+
+    <!-- Libraries -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/BezierPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js"></script>
+    <script src="https://kit.fontawesome.com/260f51929d.js" crossorigin="anonymous"></script>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  </head>
+  <body>
+    <!-- NAV BAR AREA -->
+    <div class="hamburgerArea">
+      <div class="menuLogo">
+        <img src="assets/FRNDSAgency.png" alt="FRNDS Agency" />
+      </div>
+      <div class="menuIcon">
+        <span id="topHam"></span>
+        <span id="midHam"></span>
+        <span id="bottomHam"></span>
+      </div>
+    </div>
+
+    <!-- OFF PAGE MENU -->
+    <div class="offPageMenu">
+      <div class="menu">
+        <ul id="menuList">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">WORK</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Banner Area  -->
+    <div id="bannerArea" class="fixedBanner">
+      <img id="clientLogo" src="assets/clientLogos/logo.png" alt="FRNDS Agency Work for Roofnest">
+    </div>
+    
+    <!-- Content Area -->
+    <div id="contentArea" class="contentContainer">
+
+      <!-- Overview Area -->
+      <div id="oveviewContainer">
+        <div id="scrollIndicatorView">
+          <span id="indicator"></span>
+        </div>
+
+        <div id="overivewContentView">
+          <div id="overviewDescriptionArea" class="overviewFlexbox">
+            <center>
+                <h1>Roofnest is providing roof top tents for campers, adventurers, and those always on the move. The weatherproof, aerodynamic "bedroom" attaches to the roof rack of any car or truck and instantly expands to create a cozy, protected space for you, your family and your <span style="color: #FCB2AE; font-weight: bold;">FRNDS</span>.</h1>
+            </center>
+          </div>
+
+          <div id="overviewInfoArea" class="overviewFlexbox" >
+              <div id="client" class="overviewRowSmall overviewRow">
+                  <div class="oRowLeft">
+                    <h3>Client</h3>
+                  </div>
+                  
+                  <div class="overviewSeperator"></div>
+
+                  <div class="oRowRight">
+                    <h2>Roofnest</h2>
+                  </div>
+              </div>
+
+              <div id="industry" class="overviewRowSmall overviewRow">
+                  <div class="oRowLeft">
+                    <h3>Industry</h3>
+                  </div>
+
+                  <div class="overviewSeperator"></div>
+
+                  <div class="oRowRight">
+                    <h2>Outdoor</h2>
+                  </div>
+              </div>
+
+              <div id="ouRole" class="overviewRowLarge overviewRow">
+                <div id="oRowLarge" class="oRowLeft">
+                  <h3>Our Role</h3>
+                </div>
+
+                <div class="overviewSeperator"></div>
+
+                <div class="oRowRight">
+                    <ul>
+                      <li>Social Media Managment</li>
+                      <li>Partnerships & Brand Ambassador Managment</li>
+                      <li>Content Creation</li>
+                      <li>Graphic Design</li>
+                    </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WAVE BREAK -->
+      <div class="waveBreak">
+          <svg id="waveFront" class="waveFront" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 375.219 88.721">
+            <defs>
+              <style>.a{fill:#f0f0f0;opacity:1.0;}</style>
+            </defs>
+            <g transform="translate(-0.781 -45)">
+              <path id="waveFrontStart" class="a" d="M-952.219,436.815s62.55-73.707,187.586,0,187.633,0,187.633,0v55.963H-952.219Z" transform="translate(953 -359.056)"/>
+              <path class="hideEndWave" id="waveFrontEnd" class="a" d="M-952.219,436.815s57.774,66.845,187.586,0,187.633,0,187.633,0v55.963H-952.219Z" transform="translate(953 -359.056)"/>
+            </g>
+          </svg>
+
+          <svg id="waveBack" class="waveBack" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 376.738 109.24">
+            <defs>
+              <style>.a{fill:#f0f0f0;opacity:0.5;}</style>
+            </defs>
+            <g transform="translate(1.738 -50.905)">
+              <path id="waveBackStart" class="a" d="M-952.219,438.586s62.55-77.694,187.586,0,187.633,0,187.633,0V513.3H-953.738Z" transform="translate(952 -353.151)"/>
+              <path class="hideEndWave" id="waveBackEnd" class="a" d="M-952.219,438.586s63.676,60.013,187.586,0,187.633,0,187.633,0V513.3H-953.738Z" transform="translate(952 -353.151)"/>
+            </g>
+          </svg>
+      </div>
+
+      <!-- WORK AREA 1 -->
+      <div id="workArea1" class="workArea">      
+          <div class="wContent">
+            <div class="wInfoArea contentFlexbox">
+              <div class="wHeaderArea">
+                <img class="headerImgAlignLeft" id="sectionNumber1Lines" src="../assets/uiElements/DashPinkPurple.png" alt="FRNDS Agency Digital Marketing"/>
+                <h1 class="headerH1AlignLeft" id="sectionNumber1">01</h1>
+                <h2 class="headerH2AlignLeft" id="sectionNumber1Title">Social Media</h2>
+                <h2 class="headerH2AlignLeft" id="sectionNumber1TitleBottom">Managment</h2>
+              </div>
+      
+              <div id="workArea1Text" class="wTextArea">
+                <h3>
+                    We tapped into the unique, niche community, Roofnest occupies and crafted a language around Roofnest that you are not just buying a product. You are joining a tight-knit community of like minded individuals, who all shared a common interest. Forming this community we rose Roofnest’s social following from 800 to over 20,000 followers on Instagram, and generated over $750,000 in paid and organic social revenue. 
+                </h3>
+              </div>
+            </div>
+    
+            <div class="wWorkArea" class="contentFlexbox">
+              <img id="rnLeft" class="brandingImage" src="assets/social/rnSocialLeft.png" alt="FRNDS Agency Design Work for Roofnest">
+              <img id="rnRight" class="brandingImage" src="assets/social/rnSocialRight.png" alt="FRNDS Agency Design Work for Roofnest">
+              <img id="rnCenter" class="brandingImage" src="assets/social/rnSocialCenter.png" alt="FRNDS Agency Design Work for Roofnest">
+            </div>
+          </div>
+        </div>
+
+        <!-- WORK AREA 2 -->
+        <div id="workArea2" class="workArea">
+          <div class="wContent">
+            <div class="wInfoArea contentFlexbox">
+              <div class="wHeaderArea">
+                <img class="headerImgAlignLeft" id="sectionNumber2Lines" src="../assets/uiElements/DashPinkPurpleDark.png" alt="FRNDS Agency Digital Marketing">
+                <h1 class="headerH1AlignLeft" id="sectionNumber2">02</h1>
+                <h2 class="headerH2AlignLeft" id="sectionNumber2Title">Graphic Design</h2>
+              </div>
+
+              <div id="workArea2Text" class="wTextArea">
+                <h3>Frnds Agency provides graphic design art direction, concepting and creation for physical branding collateral such as brand guides, sales and marketing trifolds and assets, and more.</h3>
+              </div>
+            </div>
+
+            <div class="wWorkArea" class="contentFlexbox">
+              <img id="brochure" class="brandingImage" src="assets/graphicDesign/brochure.png" alt="Roofnest Ambassador Brochure">
+            </div>
+          </div>
+        </div>
+
+        <!-- WORK AREA 3 -->
+        <div id="workArea3" class="workArea">
+          <div class="wContent">
+            <div id="ccInfoArea3" class="wInfoArea contentFlexbox">
+              <div class="wHeaderArea">
+                <img class="headerImgAlignLeft" id="sectionNumber3Lines" src="../assets/uiElements/DashPinkPurpleDarkest.png" alt="FRNDS Agency Content Creation">
+                <h1 class="headerH1AlignLeft" id="sectionNumber3">03</h1>
+                <h2 class="headerH2AlignLeft" id="sectionNumber3Title">Content Creation</h2>
+              </div>
+
+              <div id="workArea3Text" class="wTextArea">
+                <h3>Roofnest first approached us to ramp up their social media game - and when we want something done right, we take to the streets ourselves. With a roofnest secured to the roof of our car, our team ventured out to capture Roofnest in it’s intended environment with people using and enjoying the product. We produced, art directed, shot and edited visual content captured for social platforms and campaigns. We developed and implemented a consistent, strong photography style that worked across both digital and print, and married well with their communities’ aesthetic.</h3>
+              </div>
+            </div>
+
+            <div class="wWorkArea" id="wWorkArea3">
+              <div class="wSection" id="wSection1">
+                  <video id="rnLoop" src="assets/contentCreation/roofnestLoop.mp4" autoplay loop></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WORK AREA 4  -->
+        <div id="workArea4" class="workArea">
+          <div class="wContent">
+            <div class="wSection" id="wSection1">
+              <div id="dkTitle" class="sectionTitle">
+                  
+              </div>
+  
+              <div id="mobileGrid" class="sectionContent">
+                <img id="dkMid" src="assets/contentCreation/rn1-mid.png" alt="FRNDS Agency Content Creation">
+                <img id="dkDashes" src="assets/contentCreation/dkDashes.png" alt="FRNDS Agency Content Creation">
+                <img id="dkTop" src="assets/contentCreation/rn1-top.png" alt="FRNDS Agency Content Creation">
+                <img id="dkBottom" src="assets/contentCreation/rn1-bottom.png" alt="FRNDS Agency Content Creation">
+              </div>
+              
+              <div class="sectionContentLarge">
+
+                <img class="deshDashes" src="assets/contentCreation/dashesDesk.png" alt="FRNDS Agency Content Creation">
+                 
+                <div id="desktopGrid">
+                    <img src="assets/contentCreation/rn1-1.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn1-2.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn1-3.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn2-1.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn2-2.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn2-3.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn3-1.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn3-2.jpg" alt="FRNDS Agency Content Creation">
+                    <img src="assets/contentCreation/rn3-3.jpg" alt="FRNDS Agency Content Creation">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WORK AREA 5 -->
+        <div id="workArea5" class="workArea">
+          <div class="wContent">
+            <div class="wSection" id="wSection2">
+              <div id="aeTitle" class="sectionTitle">
+               
+              </div>
+
+              <div id="mobileGrid" class="sectionContent">
+                <img id="aeMid" src="assets/contentCreation/rn2-mid.png" alt="FRNDS Agency American Eagle">
+                <img id="aeDashes" src="assets/contentCreation/dkDashesRight.png" alt="FRNDS Agency American Eagle">
+                <img id="aeTop" src="assets/contentCreation/rn2-top.png" alt="FRNDS Agency American Eagle">
+                <img id="aeBottom" src="assets/contentCreation/rn2-bottom.png" alt="FRNDS Agency American Eagle">
+              </div>
+
+              <div class="sectionContentLarge">
+
+                <img class="deshDashesRight" src="assets/contentCreation/dashesDesk.png" alt="FRNDS Agency Content Creation">
+                 
+                <div id="desktopGrid">
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WORK AREA 6 -->
+        <div id="workArea6" class="workArea">
+          <div class="wContent">
+            <div class="wSection" id="wSecton3">
+              <div id="adidasTitle" class="sectionTitle">
+               
+              </div>
+
+              <div class="sectionContent">
+                <img id="adidasMid" src="assets/contentCreation/rn3-mid.png" alt="FRNDS Agency Adidas Parlay">
+                <img id="adidasDashes" src="assets/contentCreation/dkDashes.png" alt="FRNDS Agency Adidas Parlay">
+                <img id="adidasTop" src="assets/contentCreation/rn3-top.png" alt="FRNDS Agency Adidas Parlay">
+                <img id="adidasBottom" src="assets/contentCreation/rn3-bottom.png" alt="FRNDS Agency Adidas Parlay">
+              </div>
+
+              <div class="sectionContentLarge">
+
+                <img class="deshDashes" src="assets/contentCreation/dashesDesk.png" alt="FRNDS Agency Content Creation">
+                 
+                <div id="desktopGrid">
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FOOTER WAVE BREAK -->
+        <!-- <div class="waveBreak waveFlipped">
+          <svg id="waveFront" class="waveFront" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 375.219 88.721">
+            <defs>
+              <style>.b{fill:#ffffff;opacity:1.0;}</style>
+            </defs>
+            <g transform="translate(-0.781 -45)">
+              <path id="waveFrontStart" class="b" d="M-952.219,436.815s62.55-73.707,187.586,0,187.633,0,187.633,0v55.963H-952.219Z" transform="translate(953 -359.056)"/>
+              <path class="hideEndWave" id="waveFrontEnd" class="b" d="M-952.219,436.815s57.774,66.845,187.586,0,187.633,0,187.633,0v55.963H-952.219Z" transform="translate(953 -359.056)"/>
+            </g>
+          </svg>
+  
+          <svg id="waveBack" class="waveBack" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 376.738 109.24">
+            <defs>
+              <style>.b{fill:#ffffff;opacity:0.6;}</style>
+            </defs>
+            <g transform="translate(1.738 -50.905)">
+              <path id="waveBackStart" class="b" d="M-952.219,438.586s62.55-77.694,187.586,0,187.633,0,187.633,0V513.3H-953.738Z" transform="translate(952 -353.151)"/>
+              <path class="hideEndWave" id="waveBackEnd" class="b" d="M-952.219,438.586s63.676,60.013,187.586,0,187.633,0,187.633,0V513.3H-953.738Z" transform="translate(952 -353.151)"/>
+            </g>
+          </svg>
+        </div> -->
+
+        <!-- FOO -->
+        <div class="footer">
+          <div class="fContentArea">
+            <img src="assets/FRNDSAgencyWhite.png" alt="FRNDS Agency">
+            <h1>3300 Walnut St.</h1>
+            <h1>Denver, CO 80205</h1>
+            <h1>847.942.4826</h1>
+
+            <div class="socialArea">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-vimeo"></i>
+            </div>
+          </div>
+    
+          <div class="fCopyrightArea">
+              <i class="far fa-copyright"></i>
+              <h3>FRNDS Agency 2019</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
