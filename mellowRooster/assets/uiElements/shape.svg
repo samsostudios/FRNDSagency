@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375.219" height="833.095" viewBox="0 0 375.219 833.095">
+    <defs>
+        <style>
+            .a,.b{fill:#f4f4f4;}.b{opacity:0.535;}
+        </style>
+    </defs>
+    <g transform="translate(1024.219 -685.905)">
+        <path class="a bgShape1" d="M-952.219,472.255s62.55-153.447,187.586,0,187.633,0,187.633,0v743.8H-952.219Z" transform="translate(-72 302.944)"/>
+        <path class="b bgShape2" d="M-952.219,474.026s62.55-157.433,187.586,0,187.633,0,187.633,0v763.124H-952.219Z" transform="translate(-72 281.849)"/>
+    </g>
+</svg>
