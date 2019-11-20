@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>FRNDS Agency</title>
+    <title>FRNDS || A Creative Agency</title>
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
@@ -54,43 +54,120 @@
       </div>
     </div>
 
-    <div id="landing">
-      <div class="menuArea">
-        <div class="menu">
-          <h3><a href="#">HOME</a></h3>
-          <h3><a href="#">WORK</a></h3>
-          <h3><a href="#">SERVICES</a></h3>
-          <h3><a href="#">ABOUT</a></h3>
-          <h3><a href="#">CONTACT</a></h3>
+    <div class="menuArea">
+      <div class="menu">
+        <h3><a href="#">WORK</a></h3>
+        <h3><a href="#">SERVICES</a></h3>
+        <h3><a href="#">ABOUT</a></h3>
+      </div>
+    </div>
+
+    <div class="bannerWrapper">
+      <video id="desktopVideo" src="assets/reelHolder.mp4" autoplay loop></video>
+      <video id="mobileVideo" src="assets/reelMobile.mp4" autoplay loop></video>
+
+      <div class="bannerContent">
+        <div class="mobileSplit alignBottom">
+          <img src="assets/FRNDSAgencyWhite.png" alt="">
+
+          <h1>We’re not just your agency.</h1>
+          <h1>We're your <span style="color: #fcb2ae; font-weight: bold;">FRNDS</span></h1>
+        </div>
+
+        <div class="mobileSplit alignStart">
+          <center>
+              <h2>A FULL-SERVICE CREATIVE AGENCY 
+                  BASED IN DENVER SPECIALIZING IN
+                  CONTENT CREATION, BRANDING, 
+                  & DIGITAL MARKETING
+              </h2>
+          </center>
+
+          <button id="showReelButton">VIEW FULL REEL</button>
         </div>
       </div>
 
-      <div class="circle"></div>
-
-      <div class="contentArea">
-        <div class="imageArea">
-          <img id="logo" src="assets/FRNDSAgency.png" alt="" />
+      <div id="reelOverlay" class="hideReel">
+        <div class="closeArea">
+            <i id="closeReelButton" class="fas fa-times"></i>
         </div>
+        <video id="fullReel" src="assets/reel.mp4" controls></video>
+      </div>
+    </div>
 
-        <div class="textArea">
-          <h1 id="tagLine1">F*CK YOUR AGENCY</h1>
-          <h1 id="tagLine2">
-            WE WANT TO BE YOUR <span style="color: #FCB2AE">FRNDS</span>
-          </h1>
+    <div class="clientWrapper">
+      <h1>A Few of Our <span style="color: #fcb2ae; font-weight: bold;">FRNDS</span></h1>
+
+      <div class="clientGrid">
+        <div class="clientImg">
+          <img src="assets/clientLogos/adidas.png" alt="">
+        </div>
+        <div class="clientImg">
+          <img src="assets/clientLogos/dk.png" alt="">
+        </div>
+        <div class="clientImg">
+          <img src="assets/clientLogos/biolite.png" alt="">
+        </div>
+        <div class="clientImg">
+          <img src="assets/clientLogos/americanEagle.png" alt="">
+        </div>
+        <div class="clientImg">
+          <img src="assets/clientLogos/freepeople.png" alt="">
+        </div>
+        <div class="clientImg">
+          <img src="assets/clientLogos/urban.png" alt="">
+        </div>
+        <div class="clientImg">
+          <img src="assets/clientLogos/jiberish.png" alt="">
+        </div>
+        <div class="clientImg">
+          <img src="assets/clientLogos/littleman.png" alt="">
         </div>
       </div>
     </div>
 
-    <div class="downArea">
-      <!-- <canvas id="lineGrad"></canvas> -->
-      <i class="fal fa-angle-down"></i>
-      <i class="fal fa-angle-down"></i>
+    <div class="workWrapper">
+      <h1>What We Do</h1>
+
+      <div class="workGrid">
+        <div class="workItem">
+          <h1 class="verticalText">Marketing</h1>
+          <span></span>
+          <ul>
+            <li>Social Media Managment</li>
+            <li>Branding</li>
+            <li>Email Marketing</li>
+            <li>Google PPC</li>
+          </ul>
+        </div>
+        <div class="workItem">
+          <h1 class="verticalText">Content Creation</h1>
+          <span></span>
+          <ul>
+            <li>Photography</li>
+            <li>Videography</li>
+            <li>Graphic Design</li>
+            <li>Animation</li>
+          </ul>
+        </div>
+        <div class="workItem">
+          <h1 class="verticalText">Development</h1>
+          <span></span>
+          <ul>
+            <li>UI/UX</li>
+            <li>Front End Web</li>
+            <li>Back End Web</li>
+            <li>iOS</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <!-- Demo Area -->
-    <div class="demoWrapper"></div>
+    <div class="projectsWrapper">
+      <div id="p1" class="pSection"></div>
+      <div id="p2" class="pSection"></div>
+    </div>
 
-    <div class="clientsWrapper"></div>
 
     <script type="text/javascript" src="js/script.js"></script>
   </body>
